@@ -1,0 +1,37 @@
+#guidename {
+        text-align: center
+    }
+
+    /*!
+ * Start Bootstrap - Full Width Pics (https://startbootstrap.com/template-overviews/full-width-pics)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-full-width-pics/blob/master/LICENSE)
+ */
+  
+ html,
+ body,
+ header,
+ .carousel {
+   height: 60vh;
+ }
+ @media (max-width: 740px) {
+   html,
+   body,
+   header,
+   .carousel {
+     height: 100vh;
+   }
+ }
+ @media (min-width: 800px) and (max-width: 850px) {
+   html,
+   body,
+   header,
+   .carousel {
+     height: 100vh;
+   }
+ }
+ @media (min-width: 800px) and (max-width: 850px) {
+         .navbar:not(.top-nav-collapse) {
+             background: #929FBA!important;
+         }
+     }
