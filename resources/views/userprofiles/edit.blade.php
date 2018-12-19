@@ -14,7 +14,7 @@
             {{Form::text('languages', $userprofile->languages, ['class' => 'form-control', 'placeholder' => 'Spoken languages'])}}
         </div>
         <div class="form-group">
-            {{Form::label('shortdescription', 'Category')}}
+            {{Form::label('shortdescription', 'Short description')}}
             {{Form::text('shortdescription', $userprofile->shortdescription, ['class' => 'form-control', 'placeholder' => 'Short description'])}}
         </div>
         <div class="form-group">

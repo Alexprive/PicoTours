@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\UserProfile;
 use App\User;
 use App\City;
+use App\Tour;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
@@ -229,5 +230,27 @@ class UserProfileController extends Controller
         );
 
         return view('pages.guideprofile')->with($data);
+    }
+
+    public function tourtemplate($id)
+    {
+        $userprofile = UserProfile::find($id);
+        $user = User::where('id', $userprofile->user_id)->first();
+        $tours = Tour::where('user_id', $user->id)->get();
+        $citycount = City::count();
+        $guidecount = User::count();
+        $tourcount = Tour::count();
+
+        $data = array(
+            'userprofile' => $userprofile,
+            'user' => $user,
+            'tours' => $tours,
+            'citycount' => $citycount,
+            'guidecount' => $guidecount,
+            'tourcount' => $tourcount
+        );
+
+        return view('pages.tourtemplate')->with($data);
+
     }
 }

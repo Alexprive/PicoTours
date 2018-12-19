@@ -56,7 +56,7 @@
                         <p>Click a tour for more details or view the profile of the tourguide. </p>
                         <!-- buttons will get other names but use classes for style purposes only now -->
                         <div class="form-group">
-                            <br> <input type="submit" name="btnSubmit" class="btnContact" value="View Guide Profile"/>
+                            <br> <a href="/pages/guideprofile/{{$user->id}}"><input type="submit" name="btnSubmit" class="btnContact" value="View Guide Profile"/></a>
                         </div>
                     </div>
                 </div>
@@ -72,14 +72,14 @@
                                 <div class="card h-100">
                                     <div class="card-img-top">
                                         <img style="width:100%; height:100px;"
-                                             src="/storage/tour_images/{{$tour->tour_image}}"
+                                             src="/storage/tour_images/{{$tour->tour_img}}"
                                              class="img-fluid mx-auto d-block" alt="card image 1">
                                     </div>
                                     <div class="card-block d-flex flex-column">
                                         <h5 class="card-title">{{ $tour->name }}</h5>
-                                        <p class="text-justify">{!! $tour->description !!} </p>
+                                        <p class="text-justify">{!! $tour->tourshortdescription !!} </p>
                                         <div class="text-center mt-auto pt-3">
-                                            <a class="btn btn-info" href="/pages/tourtemplate/{{$tour->id}}">View Tour Details<i class="fas fa-angle-double-right"></i></a></div>
+                                            <a class="btn btn-info" href="/pages/tourdetails/{{$tour->id}}">View Tour Details<i class="fas fa-angle-double-right"></i></a></div>
                                         <br>
                                     </div>
                                 </div>

@@ -19,7 +19,6 @@
                     </div><br>
                     <i>Get to know the person behind the tours. <br>
                     View all tours the guide has to offer and the or message the guide for inquiries. </i>
-                
                 </div>
             </div>
             
@@ -36,17 +35,19 @@
                     <input type="submit" name="btnSubmit" class="btnContact" value="Message"/>
                 </div>
                 <div class="form-group">
-                    <input type="submit" name="btnSubmit" class="btnContact" value="View All My Tours"/>
+                        <a href="/pages/tourtemplate/{{$user->id}}"><input type="submit" name="btnSubmit" class="btnContact" value="View All My Tours"/></a>
                 </div><br>
                 <h5>Overview</h5>
+                <b>SUMMARY:</b>
+                <p>{{ $userprofile->shortdescription }}</p>
                 <b>GUIDENAME</b>
-                {{ $user->name }}<br>
+                <p>{{ $user->name }}</p>
                 <b>LIVES IN</b>
-                {{ $userprofile->hometown }}<br>
+                <p>{{ $userprofile->hometown }}</p>
                 <b>LANGUAGE(S) SPOKEN:</b>
-                {{ $userprofile->languages }}<br>
+                <p>{{ $userprofile->languages }}</p>
                 <b>MEMBER SINCE</b>
-                {{ $userprofile->created_at }}<br>
+                <p>{{ $userprofile->created_at }}</p>
                 </p>        <br><br>
                 <p>
                 <ul class="social-icon">

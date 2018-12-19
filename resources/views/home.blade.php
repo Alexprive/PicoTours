@@ -5,6 +5,15 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
+                    <div class="card-header">Dashboard</div>
+                    @if( $user->isAdmin === 1)
+                    <div class="card-body"><a href="{{url('admin/routes')}}">Admin</a></div>
+                    @endif
+
+                    <table border="0" class="center" style="margin-top: 20px;">
+                        <tr>
+                            <td><a href="/cities/create" class="btn btn-primary">Add a City</a></td>
+                            <td><a href="/tourcategories/create" class="btn btn-primary">Add a Categorie</a></td>
                     <div class="card-header">Dashboard<div style="float:right"><a href="/faq"> FAQ</a></div></div>
                     <div class="card-body"><a href="{{url('admin/routes')}}">Admin</a></div>
                    

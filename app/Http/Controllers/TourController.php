@@ -6,6 +6,7 @@ use App\Tour;
 use App\TourCategory;
 use App\TourType;
 use App\City;
+use App\UserProfile;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -33,6 +34,14 @@ class TourController extends Controller
     {
         $tourcategories = TourCategory::pluck('categoryname', 'id');
         $city = City::pluck('name', 'id');
+        $userprofile= UserProfile::where('id', auth()->user()->id)->first();
+
+        if (count($userprofile) < 1) {
+
+            return view('userprofiles.create')->with('error', 'Create a Userprofile first!');
+        }
+
+        else {
 
 
         $data = array (
@@ -41,6 +50,8 @@ class TourController extends Controller
         );
 
         return view ('tours.create')->with($data);
+
+        }
     }
 
     /**
