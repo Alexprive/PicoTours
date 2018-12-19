@@ -19,27 +19,27 @@
 
 
     <div style="width: 100%; height: 75vh; margin: 0; padding: 0;">
-        <img style="width:100%; height: 75vh" class="group list-group-image img-fluid"
+        <img style="width:100%; height: 75vh;" class="group list-group-image img-fluid"
              src="/storage/city_images/{{$city->city_image}}">
     </div>
 
-
     <div class="container">
 
-        <div class="styled-heading">
+        <div class="styled-heading" style="margin-bottom: 0px; margin-top: 10px">
             <h3>Find your sustainable {{ $city->name }} tour!</h3>
-            Our guides offer {{ $tourcount }} tours in {{ $city->name }}. Book now for your next trip!
+            Our guides offer {{ $tourcount }} tours in {{ $city->name }}. <br><br>
         </div>
 
         <div class="row">
             <div class="col-md-4">
-                <div class="card bg-faded" id="city_sidebar">
-                    <div class="styled-heading">
+                <div class="card bg-faded" id="sidebar">
+                    <div class="styled-heading" style="margin-bottom: 0px">
                         <h3>Local guides in {{ $city->name }}</h3>
                     </div>
                     <div class="featured_cityguides" style="text-align:center">
                         <i>There are {{ $guidecount }} local guides<br></i>
-                        <a href="#"><img title="profile image" class="img-circle img-responsive"
+                       
+                        <!-- <a href="#"><img title="profile image" class="img-circle img-responsive"
                                          src="{{asset('img/matthijs.png')}}" width=30%></a>
                         <a href="#"><img title="profile image" class="img-circle img-responsive"
                                          src="{{asset('img/pasfoto-sven.png')}}" width=30%></a>
@@ -50,13 +50,14 @@
                         <a href="#"><img title="profile image" class="img-circle img-responsive"
                                          src="{{asset('img/matthijs.png')}}" width=30%></a>
                         <a href="#"><img title="profile image" class="img-circle img-responsive"
-                                         src="{{asset('img/pasfoto-sven.png')}}" width=30%></a>
-                        <div class="cta" style="text-align:center">
+                                         src="{{asset('img/pasfoto-sven.png')}}" width=30%></a>-->
+
+                        <div class="cta" style="text-align:center"><br>
                             <input type="submit" name="btnSubmit" class="btnContact" value="Meet our Guides"/>
                         </div>
                     </div>
 
-                    <div class="styled-heading">
+                    <div class="styled-heading" style="margin-bottom: 0px;">
                         <br>
                         <h3>{{ $city->name }} Private Tours</h3>
                     </div>
@@ -77,10 +78,10 @@
             <div class="col-md-8">
                 <div class="row">
                     <div class="col-md-12" style="text-align:center">
-                        <div class="styled-heading">
+                        <div class="styled-heading" style="margin-bottom: 0px">
                             <h3>{{ $city->name }} City Tours</h3>
                         </div>
-                        <p> Slogan van de stad? </p>
+                        <p> Book now for your next trip! </p>
 
                     @include ('inc.categorytags')
 
@@ -116,8 +117,7 @@
                                             {!! $tour->tourdescription !!}</p>
                                         <div class="row">
                                             <div class="col-xs-12 col-md-12" style="text-align:center">
-                                                <a class="btn btn-info" href="/pages/tourdetails/{{$tour->id}}">Read
-                                                    more</a>
+                                                <a class="btn btn-info" href="/pages/tourdetails/{{$tour->id}}">View All Tours</a>
                                             </div>
                                         </div>
                                     </div>

@@ -13,34 +13,39 @@
 
         <div class="col-md-8">
             <div class="row">
-                <div class="col-md-12" id="profile_miniheader">
-                    <div class="styled-heading">
-                        <h3>{{ $user->name }}</h3>
-                    </div>
-                    <i>{{ $userprofile->hometown }}</i><br>
-                    <p> Tourguide since {{ $userprofile->created_at }}</p>
+                <div class="col-md-12" id="profile_miniheader" style="text-align:center">
+                    <div class="styled-heading" style="margin-bottom: 10px">
+                        <h3>Guide profile of <b>{{ $user->name }}</b></h3>
+                    </div><br>
+                    <i>Get to know the person behind the tours. <br>
+                    View all tours the guide has to offer and the or message the guide for inquiries. </i>
+                
                 </div>
             </div>
-            <br>
-            {!! $userprofile->description !!}
+            
+            <p style="padding: 10px;">
+            {!! $userprofile->description !!}</p>
         </div>
         <div class="col-md-4">
             <div class="card bg-faded" id="sidebar">
                 <h3>Guide details</h3>
                 <p>
-                    <img style="width:100%; height: 350px;" class="group list-group-image img-fluid"
+                    <img style="width:50%; height: 50%;" class="group list-group-image img-fluid"
                          src="/storage/profilepics/{{$userprofile->profilepic}}">
                 <div class="form-group">
                     <input type="submit" name="btnSubmit" class="btnContact" value="Message"/>
                 </div>
                 <div class="form-group">
-                    <input type="submit" name="btnSubmit" class="btnContact" value="View My Tours"/>
-                </div>
-                LIVES IN<br>
+                    <input type="submit" name="btnSubmit" class="btnContact" value="View All My Tours"/>
+                </div><br>
+                <h5>Overview</h5>
+                <b>GUIDENAME</b>
+                {{ $user->name }}<br>
+                <b>LIVES IN</b>
                 {{ $userprofile->hometown }}<br>
-                LANGUAGE(S) SPOKEN:<br>
+                <b>LANGUAGE(S) SPOKEN:</b>
                 {{ $userprofile->languages }}<br>
-                MEMBER SINCE<br>
+                <b>MEMBER SINCE</b>
                 {{ $userprofile->created_at }}<br>
                 </p>        <br><br>
                 <p>

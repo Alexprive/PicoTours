@@ -13,7 +13,6 @@
 					<ul class="list-unstyled quick-links">
 						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Home</a></li>
 						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>All cities</a></li>
-						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>All categories</a></li>
 						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Search</a></li>
 						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Contact</a></li>
 					</ul>
@@ -22,20 +21,18 @@
 					<h5>Quick links</h5>
 					<ul class="list-unstyled quick-links">
 						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>About us</a></li>
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>How it works</a></li>
 						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Register as guide</a></li>
 						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Login as guide</a></li>
-						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>How it works</a></li>
-						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
+						
 					</ul>
 				</div>
 				<div class="col-xs-12 col-sm-4 col-md-4">
 					<h5>Quick links</h5>
 					<ul class="list-unstyled quick-links">
-						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Sitemap</a></li>
-						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Worldmap</a></li>
-						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
-						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
-						<li><a href="https://wwwe.sunlimetech.com" title="Design and developed by"><i class="fa fa-angle-double-right"></i>Team City Trip</a></li>
+							<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>F.A.Q.</a></li>
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Privacy statement</a></li>
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Terms of agreement</a></li>
 					</ul>
 				</div>
 			</div>
