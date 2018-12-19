@@ -17,6 +17,10 @@ Route::get('/about', 'PagesController@about');
 
 Route::get('/sitemap', 'PagesController@sitemap');
 
+Route::get('/booktour', 'PagesController@booktour');
+
+Route::post('/booktour', 'PagesController@booktour2');
+
 Route::resource('cities', 'CityController');
 Route::get('/pages/cityoverview', 'CityController@cityoverview');
 Route::get('/pages/citytemplate/{id}', 'CityController@citytemplate');

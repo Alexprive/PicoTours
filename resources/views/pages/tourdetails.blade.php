@@ -51,7 +51,7 @@
                                     <input type="submit" name="btnSubmit" class="btnContact" value="View Guide Profile"/>
                                 </div>
                              <div class="form-group">
-                        <input type="submit" name="btnSubmit" class="btnContact" value="Book This Tour"/>
+                        <input type="submit" name="btnSubmit" class="btnContact" value="Book This Tour" onclick="location.href='/booktour';"/>
                     </div>
                     <div class="form-group">
                         <input type="submit" name="btnSubmit" class="btnContact" value="View All My Tours"/>
