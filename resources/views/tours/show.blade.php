@@ -22,7 +22,7 @@
             <b> {!! $tours->tourdescription !!}</b>
             <br>
         </div>
-        <p>Tour created at: {{$tours->created_at}}</p>
+        <p>Tour created at: {{$tours->created_at->format('d/m/Y')}}</p>
         <br>
         <a href="/tours" class="btn btn-success">Terug</a>
         @if(!Auth::guest())
