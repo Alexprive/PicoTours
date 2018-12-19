@@ -3,18 +3,32 @@
 		<div class="contact-image">
 			<img src="{{ asset('img\icon_contact.png') }}" alt="rocket_contact"/>
 		</div>
-		<form method="post">
+		<form >
 			<h3>Drop Us a Message</h3>
+			 @if (Session::has('flash_message'))
+            <div class="alert alert-succes">{{ Session::get('flash_message') }}</div>
+            @endif
 		   <div class="row">
 				<div class="col-md-6">
 					<div class="form-group">
-						<input type="text" name="txtName" class="form-control" placeholder="Your Name *" value="" />
+						<form action="{{ route('contact.store') }}" method="POST">
+                {{ csrf_field()}}
+                <input type="text" name="name" value="" placeholder="Name">
+                @if ($errors->has('name'))
+                    <small class="form-text invalid-feedback">{{ $errors->first('firstname')}}</small>
+                @endif
 					</div>
 					<div class="form-group">
-						<input type="text" name="txtEmail" class="form-control" placeholder="Your Email *" value="" />
+						<input type="email" name="email" value="" placeholder="Your email">
+                @if ($errors->has('email'))
+                    <small class="form-text invalid-feedback">{{ $errors->first('email')}}</small>
+                @endif 
 					</div>
 					<div class="form-group">
-						<input type="text" name="txtPhone" class="form-control" placeholder="Your Phone Number *" value="" />
+						<input type="phone" name="Phone" value="" placeholder="Phonenumber">
+                @if ($errors->has('phone'))
+                    <small class="form-text invalid-feedback">{{ $errors->first('phone')}}</small>
+                @endif 
 					</div>
 					<div class="form-group">
 						<input type="submit" name="btnSubmit" class="btnContact" value="Send Message" />
@@ -22,7 +36,10 @@
 				</div>
 				<div class="col-md-6">
 					<div class="form-group">
-						<textarea name="txtMsg" class="form-control" placeholder="Your Message *" style="width: 100%; height: 150px;"></textarea>
+						<textarea name="message" rows="10" cols="30" placeholder="Your question"></textarea>
+                @if ($errors->has('message'))
+                    <small class="form-text invalid-feedback">{{ $errors->first('message')}}</small>
+                @endif    
 					</div>
 				</div>
 			</div>

@@ -17,4 +17,10 @@ class PagesController extends Controller
     public function sitemap(){
         return view ('pages.sitemap');
     }
+    public function faq(){
+        return view ('pages.faq');
+    }
+    public function contact() {
+        return view('inc.contact');
+    }
 }

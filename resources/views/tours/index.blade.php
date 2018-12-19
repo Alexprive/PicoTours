@@ -12,7 +12,7 @@
                         </div>
                         <div class="col-md-10 col-sm-10">
                             <h3><a href="/tours/{{$tour->id}}">{{$tour->name}}</a></h3>
-                            <small>Added at {{$tour->created_at}}</small>
+                            <small>Added at {{$tour->created_at->format('d/m/Y')}}</small>
                         </div>
                     </div>
                 @endforeach
