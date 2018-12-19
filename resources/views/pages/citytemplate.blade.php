@@ -71,6 +71,7 @@
                         <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                     </ul>
                     </p>
+              
                 </div>
             </div>
 
@@ -87,7 +88,9 @@
 
                     <!-- buttons will get other names but use classes for style purposes only now -->
                         <div class="form-group">
-                            <br> <input type="submit" name="btnSubmit" class="btnContact" value="All City Tours"/>
+                            <br> 
+                            <a href="/pages/cityoverview">
+                            <input type="submit" name="btnSubmit" class="btnContact" value="View All Cities"/></a>
                         </div>
                     </div>
                 </div>
@@ -114,7 +117,7 @@
                                         <h4 class="group card-title inner list-group-item-heading">
                                             {{ $tour->name }}</h4>
                                         <p class="group inner list-group-item-text">
-                                            {!! $tour->tourdescription !!}</p>
+                                                {{ $tour->tourshortdescription }}</p>
                                         <div class="row">
                                             <div class="col-xs-12 col-md-12" style="text-align:center">
                                                 <a class="btn btn-info" href="/pages/tourdetails/{{$tour->id}}">View All Tours</a>

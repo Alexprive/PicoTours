@@ -57,7 +57,7 @@
                         <p>Check out tours at your next destination! </p>
                         <!-- buttons will get other names but use classes for style purposes only now -->
                         <div class="form-group">
-                            <br> <input type="submit" name="btnSubmit" class="btnContact" value="Become a Guide"/>
+                            <br> <a href="/register"><input type="submit" name="btnSubmit" class="btnContact" value="Register As Guide"/></a>
                         </div>
                     </div>
                 </div>
@@ -80,8 +80,7 @@
                                         <h5 class="card-title">{{ $city->name }}</h5>
                                         <p class="text-justify">{!! $city->description !!} </p>
                                         <div class="text-center mt-auto pt-3">
-                                            <a class="btn btn-info" href="/pages/citytemplate/{{$city->id}}">Read
-                                                more <i class="fas fa-angle-double-right"></i></a></div>
+                                            <a class="btn btn-info" href="/pages/citytemplate/{{$city->id}}">View all tours<i class="fas fa-angle-double-right"></i></a></div>
                                         <br>
                                     </div>
                                 </div>

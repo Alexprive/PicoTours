@@ -48,31 +48,33 @@
                         <img style="width:50%; height: 50%" class="group list-group-image img-fluid"
                              src="/storage/profilepics/{{$guide->profilepic}}">
                              <div class="form-group">
-                                    <input type="submit" name="btnSubmit" class="btnContact" value="View Guide Profile"/>
+                                    <a href="/pages/guideprofile/{{$user->id}}"><input type="submit" name="btnSubmit" class="btnContact" value="View Guide Profile"/></a>
                                 </div>
                              <div class="form-group">
                         <input type="submit" name="btnSubmit" class="btnContact" value="Book This Tour"/>
                     </div>
                     <div class="form-group">
-                        <input type="submit" name="btnSubmit" class="btnContact" value="View All My Tours"/>
+                            <a href="/pages/tourtemplate/{{$user->id}}">
+                                <input type="submit" name="btnSubmit" class="btnContact" value="View All My Tours"/>
+                            </a>
                     </div>
                     
                     <br>
                     <h5>Overview</h5>
                     <b>TOUR NAME:</b>
-                    {{ $tour->name }}<br>
+                    <p>{{ $tour->name }}</p>
                     <b>GUIDE NAME:</b>
-                    {{ $user->name }}<br>
+                    <p>{{ $user->name }}</p>
                     <b>TOUR CATEGORY:</b>
-                    {{ $category->categoryname }}<br>
+                    <p>{{ $category->categoryname }}</p>
                     <b>START LOCATION</b>
-                    {{ $tour->tourstartlocation }}<br>
+                    <p>{{ $tour->tourstartlocation }}</p>
                     <b>PRICE</b>
-                    {{ $tour->tourprice }}<br>
+                    <p>{{ $tour->tourprice }}</p>
                     <b>LANGUAGE(S) SPOKEN:</b>
-                    {{ $guide->languages }}<br>
+                    <p>{{ $guide->languages }}</p>
                     <b>MEMBER SINCE</b>
-                    {{ $guide->created_at }}<br>
+                    <p>{{ $guide->created_at }}</p>
                     </p>        <br><br>
                     <p>
                     <ul class="social-icon">

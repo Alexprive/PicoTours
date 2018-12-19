@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Tour;
+use App\User;
 use App\UserProfile;
 
 class HomeController extends Controller
@@ -27,8 +28,10 @@ class HomeController extends Controller
     {
         $tours = Tour::where('user_id', auth()->id())->get();
         $userprofile = UserProfile::where('user_id', auth()->id())->get();
+        $user = User::where('id', auth()->id())->first();
 
-        return view('home')->with(['tours' => $tours, 'hasProfile' => count($userprofile), 'userprofile' => $userprofile ]);
+
+        return view('home')->with(['tours' => $tours, 'hasProfile' => count($userprofile), 'userprofile' => $userprofile, 'user' => $user ]);
     }
 
     public function admin()

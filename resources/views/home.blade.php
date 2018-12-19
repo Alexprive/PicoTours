@@ -6,7 +6,9 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">Dashboard</div>
+                    @if( $user->isAdmin === 1)
                     <div class="card-body"><a href="{{url('admin/routes')}}">Admin</a></div>
+                    @endif
 
                     <table border="0" class="center" style="margin-top: 20px;">
                         <tr>

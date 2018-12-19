@@ -2,7 +2,7 @@
 <style>
      /* Image for Parallax Section */ 
      .paralsec {
-        background-image: url('{{asset('/img/groningen.jpg')}}');
+        background-image: url('{{asset('/img/tour-1.jpg')}}');
             }
  </style>
 

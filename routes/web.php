@@ -14,6 +14,8 @@
 Route::get('/', 'PagesController@index');
 
 Route::get('/about', 'PagesController@about');
+Route::get('/getstarted', 'PagesController@getstarted');
+Route::get('/faq', 'PagesController@faq');
 
 Route::get('/sitemap', 'PagesController@sitemap');
 
@@ -38,3 +40,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('admin/routes', 'HomeController@admin')->middleware('admin');
 Route::resource('userprofiles', 'UserProfileController');
 Route::get('pages/guideprofile/{id}', 'UserProfileController@guideprofile');
+Route::get('pages/tourtemplate/{id}', 'UserProfileController@tourtemplate');

@@ -1,5 +1,7 @@
 <!-- Red line can be deleted if h5 is not used -->
+@extends('layouts.app')
 
+@section('content')
 <div class="container">
         <div class="row">
             <div class="col-lg-4">
@@ -366,3 +368,5 @@
             </div>
         </div>
     </div>
+    
+    @endsection

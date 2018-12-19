@@ -78,10 +78,8 @@
                                                                 Helena</h5>
                                                       <p class="group inner list-group-item-text">
                                                                 Tourguide since 2017, experienced in the local cuisine and art scene.</p>
-                                                      <div class="row">
                                                           <div class="col-xs-12 col-md-12" style="text-align:center">
                                                               <a class="btn btn-info" href="/pages/guideprofile/4">View Guide Profile</a>
-                                                          </div>
                                                       </div>
                                                   </div>
                                               </div>
