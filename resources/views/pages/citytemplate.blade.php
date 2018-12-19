@@ -23,7 +23,6 @@
              src="/storage/city_images/{{$city->city_image}}">
     </div>
 
-
     <div class="container">
 
         <div class="styled-heading" style="margin-bottom: 0px; margin-top: 10px">
