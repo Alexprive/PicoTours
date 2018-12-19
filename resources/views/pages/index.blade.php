@@ -10,6 +10,5 @@
     @include ('inc.featuredguides')
     @include ('inc.contact')
     @include ('inc.footer')
-    @include ('inc.categories')
 
 @endsection
