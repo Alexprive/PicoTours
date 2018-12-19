@@ -19,7 +19,7 @@
 
 
     <div style="width: 100%; height: 75vh; margin: 0; padding: 0;">
-        <img style="width:100%; height: 75vh" class="group list-group-image img-fluid"
+        <img style="width:100%; height: 75vh;" class="group list-group-image img-fluid"
              src="/storage/city_images/{{$city->city_image}}">
     </div>
 
@@ -103,22 +103,22 @@
             
                         <div class="container">
 
-                    @foreach($cities as $city)
+                    @foreach($tours as $tour)
                         <div id="products" class="row view-group">
                             <div class="item col-xs-4 col-lg-4">
                                 <div class="thumbnail card">
                                     <div class="img-event">
                                         <img style="width:100%; height:100px;" class="group list-group-image img-fluid"
-                                             src="/storage/city_images/{{ $city->city_img }}">
+                                             src="/storage/tour_images/{{ $tour->tour_img }}">
                                     </div>
                                     <div class="caption card-body">
                                         <h4 class="group card-title inner list-group-item-heading">
-                                            {{ $city->name }}</h4>
+                                            {{ $tour->name }}</h4>
                                         <p class="group inner list-group-item-text">
-                                            {!! $city->citydescription !!}</p>
+                                            {!! $tour->tourdescription !!}</p>
                                         <div class="row">
                                             <div class="col-xs-12 col-md-12" style="text-align:center">
-                                                <a class="btn btn-info" href="/pages/citydetails/{{$city->id}}">View All Tours</a>
+                                                <a class="btn btn-info" href="/pages/tourdetails/{{$tour->id}}">View All Tours</a>
                                             </div>
                                         </div>
                                     </div>
