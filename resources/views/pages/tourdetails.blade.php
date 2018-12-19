@@ -10,12 +10,12 @@
         <div class="row">
             <div class="col-md-8">
                 <div class="row">
-                    <div class="col-md-12" id="profile_miniheader">
-                        <div class="styled-heading">
+                    <div class="col-md-12" id="profile_miniheader" style="text-align: center; margin-top: 15px; padding: 15px;">
+                        <div class="styled-heading" style="padding: 15px; margin-bottom: 0px;">
                             <h3>{{ $tour->name }} in {{$city->name}}</h3>
                         </div>
-                        <i>Tour location: {{ $city->name }}</i><br>
-                        <p> SHORT TOUR DESCRIPTION </p>
+                        <i>This is the detailpage for {{ $tour->name }} in {{ $city->name }}. <br>
+                            Book and check out additional details on the right.</i>
                     </div>
                 </div>
                 <br>
@@ -43,29 +43,35 @@
 
             <div class="col-md-4">
                 <div class="card bg-faded" id="sidebar" style="margin-top: 15px;">
-                    <h3>Tour details</h3>
+                    <h5><b>Tour details</b></h5>
                     <p>
-                        <img style="width:100%; height: 350px;" class="group list-group-image img-fluid"
+                        <img style="width:50%; height: 50%" class="group list-group-image img-fluid"
                              src="/storage/profilepics/{{$guide->profilepic}}">
-                    <div class="form-group">
-                        <input type="submit" name="btnSubmit" class="btnContact" value="Book Tour"/>
+                             <div class="form-group">
+                                    <input type="submit" name="btnSubmit" class="btnContact" value="View Guide Profile"/>
+                                </div>
+                             <div class="form-group">
+                        <input type="submit" name="btnSubmit" class="btnContact" value="Book This Tour"/>
                     </div>
                     <div class="form-group">
-                        <input type="submit" name="btnSubmit" class="btnContact" value="View My Tours"/>
+                        <input type="submit" name="btnSubmit" class="btnContact" value="View All My Tours"/>
                     </div>
-                    TOUR NAME:<br>
+                    
+                    <br>
+                    <h5>Overview</h5>
+                    <b>TOUR NAME:</b>
                     {{ $tour->name }}<br>
-                    GUIDE NAME:<br>
+                    <b>GUIDE NAME:</b>
                     {{ $user->name }}<br>
-                    TOUR CATEGORY:<br>
+                    <b>TOUR CATEGORY:</b>
                     {{ $category->categoryname }}<br>
-                    START LOCATION<br>
+                    <b>START LOCATION</b>
                     {{ $tour->tourstartlocation }}<br>
-                    PRICE<br>
+                    <b>PRICE</b>
                     {{ $tour->tourprice }}<br>
-                    LANGUAGE(S) SPOKEN:<br>
+                    <b>LANGUAGE(S) SPOKEN:</b>
                     {{ $guide->languages }}<br>
-                    MEMBER SINCE<br>
+                    <b>MEMBER SINCE</b>
                     {{ $guide->created_at }}<br>
                     </p>        <br><br>
                     <p>
@@ -80,5 +86,6 @@
                 </div>
             </div>
         </div>
+        <br>
     </div>
 @endsection
