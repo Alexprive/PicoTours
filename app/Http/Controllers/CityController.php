@@ -69,7 +69,7 @@ class CityController extends Controller
         $city->city_image = $fileNameToStore;
         $city->save();
 
-        return redirect('/cities')->with('success', 'City is stored!');
+        return redirect('/pages/cityoverview')->with('success', 'City is stored!');
     }
 
     /**
