@@ -51,7 +51,7 @@
                                     <a href="/pages/guideprofile/{{$user->id}}"><input type="submit" name="btnSubmit" class="btnContact" value="View Guide Profile"/></a>
                                 </div>
                              <div class="form-group">
-                        <input type="submit" name="btnSubmit" class="btnContact" value="Book This Tour"/>
+                        <input type="submit" name="btnSubmit" class="btnContact" value="Book This Tour" onclick="location.href='/booktour';"/>
                     </div>
                     <div class="form-group">
                             <a href="/pages/tourtemplate/{{$user->id}}">

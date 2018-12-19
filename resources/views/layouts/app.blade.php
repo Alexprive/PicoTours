@@ -1,38 +1,47 @@
 <!DOCTYPE html>
+
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
-   <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-   <!-- CSRF Token -->
-   <meta name="csrf-token" content="{{ csrf_token() }}">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-   <title>{{ config('app.name', 'Laravel') }}</title>
+  <!-- CSRF Token -->
+  <meta name="csrf-token" content="{{ csrf_token() }}">
 
-   <!-- Scripts -->
-   <script src="{{ asset('js/app.js') }}" defer></script>
-   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <title>{{ config('app.name', 'Laravel') }}</title>
 
-   <!-- Fonts -->
-   <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-   <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+  <!-- Scripts -->
+  <script src="{{ asset('js/app.js') }}" defer></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
-   <!-- Styles -->
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-   <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
+  <!-- Fonts -->
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
 
-</head>
+  <!-- Styles -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
+
+
+  
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 
 <body>
 
 @include ('inc.navbar')
-       @include('inc.messages')
-       @yield('content')
+      @include('inc.messages')
+      @yield('content')
 
 
-<script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+  
+
 <script>
-   CKEDITOR.replace( 'article-ckeditor' );
+
+  CKEDITOR.replace( 'article-ckeditor' );
 </script>
 
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
@@ -41,3 +50,4 @@
 
 </body>
 </html>
+

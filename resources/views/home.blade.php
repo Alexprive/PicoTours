@@ -14,6 +14,16 @@
                         <tr>
                             <td><a href="/cities/create" class="btn btn-primary">Add a City</a></td>
                             <td><a href="/tourcategories/create" class="btn btn-primary">Add a Categorie</a></td>
+                    <div class="card-header">Dashboard<div style="float:right"><a href="/faq"> FAQ</a></div></div>
+                    <div class="card-body"><a href="{{url('admin/routes')}}">Admin</a></div>
+                   
+                   
+                 
+                   
+                    <table border="0" class="center" style="margin-top: 20px;">                                         
+                            
+                        
+                        <tr>                           
                             <td><a href="/tours/create" class="btn btn-primary">Create a Tour</a></td>
                         </tr>
                     </table>
