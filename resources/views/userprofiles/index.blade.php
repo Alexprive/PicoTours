@@ -13,7 +13,7 @@
                         <div class="col-md-10 col-sm-10">
                             <div class="card padding15">
                                 <h3><a href="/userprofiles/{{$userprofile->id}}">{{ $userprofile->user->name}} &nbsp {{$userprofile->hometown}}</a></h3>
-                                <small>Aangemeld {{$userprofile->created_at}}</small>
+                                <small>Aangemeld {{$userprofile->created_at->format('d/m/Y')}}</small>
                             </div>
                         </div>
                     </div>

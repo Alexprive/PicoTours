@@ -23,7 +23,7 @@
                     <h4>Mobile phone nr. : {{ $userprofile->mobilephone }}</h4>
                     <br>
                 </div>
-                <p>Profile created at: {{$userprofile->created_at}}</p>
+                <p>Profile created at: {{$userprofile->created_at->format('d/m/Y')}}</p>
             </div>
         </div>
 
