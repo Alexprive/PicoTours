@@ -1,6 +1,6 @@
 
-<section class="site-hero overlay" data-stellar-background-ratio="0.5" style="background-image: url(img/slider_home.jpg);">
-  <div class="container">
+<section class="site-hero overlay" data-stellar-background-ratio="0.5" style="background-image: url(img/slider_home.jpg); padding: 10px">
+  <div class="container" style="padding:10px">
     <div class="row align-items-center site-hero-inner justify-content-center">
       <div class="col-md-8 text-center">
 

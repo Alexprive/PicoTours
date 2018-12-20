@@ -14,6 +14,16 @@ use Illuminate\Support\Facades\Storage;
 class TourController extends Controller
 {
     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' => ['index', 'show', 'citytemplate', 'cityoverview', 'guideoverview', 'guideprofile', 'tourdetails', 'tourtemplate']]);
+    }
+
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -151,14 +161,17 @@ class TourController extends Controller
         $tours =Tour::find($id);
         $tourcategories = TourCategory::pluck('categoryname', 'id');
         $city = City::pluck('name', 'id');
-        abort_if($tours->guide_id !== auth()->id(), 403);
-
 
         $data = array (
             'tours' => $tours,
             'tourcategories' => $tourcategories,
             'city' => $city
         );
+
+        if (Auth()->user()->id !== $tours->user_id){
+
+            return redirect('home')->with('error', 'Unauthorized page!');
+        }
 
         return view ('tours.edit')->with($data);
     }
@@ -180,7 +193,7 @@ class TourController extends Controller
             'tourdeparturetime' => 'required',
             'tourduration' => 'required',
             'tourshortdescription' => 'required',
-//            'tourhighlights' => 'required',
+//           'tourhighlights' => 'required',
             'whatsinc1' => 'required',
             'whatsinc2' => 'required',
             'whatsinc3' => 'required',
@@ -254,8 +267,6 @@ class TourController extends Controller
         $guide = DB::table('user_profiles')->where('user_id',  $tour->user_id)->first();
         $user = DB::table('users')->where('id', $tour->user_id)->first();
         $category = DB::table('tour_categories')->where('id', $tour->tourcategory_id)->first();
-//    dd( $tour->user_id);
-//        dd($guide);
 
         $data = array (
             'tour' => $tour,
@@ -263,7 +274,8 @@ class TourController extends Controller
             'guide' => $guide,
             'user' => $user,
             'category' => $category
-            );
+        );
+        
 
         return view ('pages.tourdetails')->with($data);
     }

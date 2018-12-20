@@ -9,7 +9,7 @@
             <hr>
             {!! $city->description !!}
         </div>
-        <small>Aangemeld {{ $city->created_at }}</small><br />
+        <small>Aangemeld {{ $city->created_at->format('d/m/Y') }}</small><br />
         <a href="/cities" class="btn btn-success">Back</a>
         @if(!Auth::guest())
             <a href="/cities/{{$city->id}}/edit" class="btn btn-primary">Edit</a>

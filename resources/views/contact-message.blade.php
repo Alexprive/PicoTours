@@ -1,0 +1,4 @@
+{{$email}} 
+{{$name}} 
+{{$phone}}
+{{ $msg }}

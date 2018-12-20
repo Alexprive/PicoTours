@@ -4,15 +4,20 @@
      .paralsec {
         background-image: url('{{asset('/img/tour-1.jpg')}}');
             }
+            a:hover
+{   
+  text-decoration: none;
+  color: white;
+}
  </style>
 
         <!-- First Parallax Section, used as Call To Action (CTA) -->
 <div class="jumbotron paral paralsec">
-<h1 class="display-3">CALL TO ACTION</h1>
+<h1 class="display-3" style="color: black">Make Your Pick</h1>
+<p class="lead" style="color:black; font-size: 2rem"><b>Rediscover cities through the eyes of a local, enjoy unique tours, the local taste & much more!  We want to make a difference in the tourism industry and facilitate the change it needs for the next decades.</b><br><br>
 
-<p class="lead"><iframe src="http://free.timeanddate.com/countdown/i6jlelhj/n1292/cf110/cm0/cu4/ct0/cs0/ca0/cr0/ss0/cac000/cpc000/pcf99/tcfff/fs100/szw256/szh108/tatTime%20left%20to%20end%20of%20CG%3A/tac000/tptTime%20since%20Event%20started%20in/tpc000/mac000/mpc000/iso2018-12-21T17:00:00" allowTransparency="true" frameborder="0" width="256" height="108"></iframe><br><br>
-<a class="btn btn-info btn-lg btn-md" href="#" role="button">Here is a button 1</a>
-</p>
+<a class="btnContact" href="#" role="button">Pick Your Next Destination</a></p>
+
 </div>
  
  

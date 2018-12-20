@@ -1,5 +1,5 @@
 @extends ('layouts.app')
-
+@section ('content')
 <style>
 	dl,
 dd,
@@ -142,7 +142,14 @@ dt
 /*                                       ! Responsive Stairs Diagram Ended Here ...
 =======================================================================================================================*/
 </style>
-
+<section class="py-5" id="projects" style="margin-bottom: 0px; margin-top: 0px; padding: 0px">
+	<div class="container" style="margin-bottom: 0px; margin-top: 0px;">
+	  <div class="wow" style="margin-bottom: 0px; margin-top: 0px;">
+		<h5 class="text-center h1 my-4">How It Works</h5>
+		<p class="px-5 mb-5 pb-3 lead blue-grey-text text-center">Follow these steps to book your tour </p>
+	</div>
+	</div>
+</section>
 <div class="stairs">
 	<div class="row_1">
 		<div class="number_1"><h2>05</h2></div>
@@ -191,3 +198,4 @@ dt
 	</div>
 </div>
 <br>
+@endsection
