@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <h2 class="center" style="color: black;">{{ $tours->name }}</h2>
-        <br />
+        <br/>
         <div class="card padding15">
             <h4>Takes place in: {!!   $city->name !!} </h4>
             <h4>Tourtype: {!! $tourcategories->categoryname !!}</h4>
@@ -24,16 +24,18 @@
         </div>
         <p>Tour created at: {{$tours->created_at->format('d/m/Y')}}</p>
         <br>
-        <a href="/tours" class="btn btn-success">Terug</a>
+        <a href="/tours" class="btn btn-success">Back</a>
         @if(!Auth::guest())
-            <a href="/tours/{{$tours->id}}/edit" class="btn btn-primary">Bewerken</a>
-            {!! Form::open(['action' => ['TourController@destroy', $tours->id], 'method' => 'POST', 'class' => 'float-right']) !!}
-            {{Form::hidden('_method', 'DELETE')}}
-            {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
-            {!! Form::close() !!}
+            @if (Auth::user()->id == $tours->user_id)
+                <a href="/tours/{{$tours->id}}/edit" class="btn btn-primary">Bewerken</a>
+                {!! Form::open(['action' => ['TourController@destroy', $tours->id], 'method' => 'POST', 'class' => 'float-right']) !!}
+                {{Form::hidden('_method', 'DELETE')}}
+                {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
+                {!! Form::close() !!}
+            @endif
         @endif
-        <br />
-        <br />
+        <br/>
+        <br/>
         <img style="width:100%" src="/storage/tour_images/{{$tours->tour_img}}">
     </div>
 

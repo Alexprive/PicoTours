@@ -1,5 +1,5 @@
 <!--============================= FEATURED CITIES =============================-->
-<section class="main-block">
+<section class="main-block" style="padding: 10px">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-5">
@@ -88,7 +88,7 @@
                 </div>
             </div>
             <div class="form-group" style="text-align: center">
-                    <br> <input type="submit" name="btnSubmit" class="btnContact" value="All City Tours" style="width:150px" onclick="location.href='/pages/cityoverview';"/>
+                    <br> <input type="submit" name="btnSubmit" class="btnContact" value="View All Cities" style="width:150px" onclick="location.href='/pages/cityoverview';"/>
                  </div>
         </div>
     </section>

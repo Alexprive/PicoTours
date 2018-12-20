@@ -7,7 +7,10 @@
             <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>
                 <div style= text-align:center><h2>Here you can register as a guide.</h2>
-                After registration you have to make a profile before you can list your tour.</div>
+
+                    After registration you have to make a profile before you can list your tour.</div>
+
+                <div class="card-body">
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf

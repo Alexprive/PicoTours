@@ -6,10 +6,9 @@
 @section('content')
 
     @include ('inc.alt_slider')
-    @include ('inc.header')
+    @include ('inc.header-svg')
     @include ('inc.featuredcities')    
-    @include ('inc.parallax_mini')
-    @include ('inc.featuredguides')
+    @include ('inc.featuredguides')    
     @include ('inc.contact')
     @include ('inc.footer')
 

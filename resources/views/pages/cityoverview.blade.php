@@ -10,11 +10,10 @@
 
     </style>
     <div class="container">
-
-        <div class="styled-heading">
+        <div class="styled-heading" style="margin-top: 20px; margin-bottom: 20px">
             <h3>Find your sustainable city tour!</h3>
-            Our {{ $guidecount }} guides offer {{ $tourcount }} tours in {{ $citycount }} cities. Find tours the city
-            you want to visit.
+           <i>Our {{ $guidecount }} guides offer {{ $tourcount }} tours in {{ $citycount }} cities. Find tours the city
+            you want to visit.</i>
         </div>
 
         <div class="row">
@@ -22,7 +21,7 @@
                 <div class="card bg-faded" id="city_overview_sidebar">
 
                     <div class="styled-heading">
-                        <h3>Find a tour</h3>
+                        <h3>Select a city</h3>
                     </div>
                     <p>
                         Rediscover cities through the eyes of a local, enjoy unique tours, the local taste & much
@@ -41,12 +40,13 @@
                     </div>
                     <div style="text-align: center">
                    <p> {{ $guidecount }} guides in {{ $citycount }} cities / countries.<br><br>
-                    Learn more about Pico Tours.
+                    <a href="/about/" style="color: black">Learn more about Pico Tours.</a>
                     </p>
+                    {{-- @include ('inc.animation') --}}
                 </div>
-                    <p><img src="{{asset('img/social.png')}}" width=100%></p>
                 </div>
-                {{--@show <!-- Don't know function for this show, sidebar? -->--}}
+                <br>
+                <br>
             </div>
             <div class="col-md-8">
                 <div class="row">
@@ -80,7 +80,7 @@
                                         <h5 class="card-title">{{ $city->name }}</h5>
                                         <p class="text-justify">{!! $city->description !!} </p>
                                         <div class="text-center mt-auto pt-3">
-                                            <a class="btn btn-info" href="/pages/citytemplate/{{$city->id}}">View all tours<i class="fas fa-angle-double-right"></i></a></div>
+                                            <a class="btn btn-info" href="/pages/citytemplate/{{$city->id}}">View All Tours<i class="fas fa-angle-double-right"></i></a></div>
                                         <br>
                                     </div>
                                 </div>

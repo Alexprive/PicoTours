@@ -32,7 +32,7 @@
                     <img style="width:50%; height: 50%;" class="group list-group-image img-fluid"
                          src="/storage/profilepics/{{$userprofile->profilepic}}">
                 <div class="form-group">
-                    <input type="submit" name="btnSubmit" class="btnContact" value="Message"/>
+                    <input type="submit" name="btnSubmit" class="btnContact" value="Message" onclick="location.href='/booktour';"/>
                 </div>
                 <div class="form-group">
                         <a href="/pages/tourtemplate/{{$user->id}}"><input type="submit" name="btnSubmit" class="btnContact" value="View All My Tours"/></a>

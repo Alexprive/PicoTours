@@ -13,7 +13,7 @@
                     </div>-->
                     <div class="card padding15">
                         <h3><a href="/tourcategories/{{$tourcategory->id}}">{{$tourcategory->categoryname}}</a></h3>
-                        <small>Aangemeld {{$tourcategory->created_at}}</small>
+                        <small>Aangemeld {{$tourcategory->created_at->format('d/m/Y')}}</small>
                     </div>
                 @endforeach
                 {{ $tourcategories->links() }}

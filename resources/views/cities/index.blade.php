@@ -13,7 +13,7 @@
                         </div>
                         <div class="col-md-10 col-sm-10">
                             <h3><a href="/cities/{{$city->id}}">{{$city->name}}</a></h3>
-                            <small>City added: {{$city->created_at}}</small>
+                            <small>City added: {{$city->created_at->format('d/m/Y')}}</small>
                         </div>
                     </div>
                 @endforeach

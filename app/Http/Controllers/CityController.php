@@ -13,6 +13,16 @@ use Illuminate\Support\Facades\Storage;
 class CityController extends Controller
 {
     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' => ['index', 'show', 'citytemplate', 'cityoverview', 'guideoverview', 'guideprofile', 'tourdetails', 'tourtemplate']]);
+    }
+
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -69,7 +79,7 @@ class CityController extends Controller
         $city->city_image = $fileNameToStore;
         $city->save();
 
-        return redirect('/pages/cityoverview')->with('success', 'City is stored!');
+        return redirect('/cities')->with('success', 'City is stored!');
     }
 
     /**
@@ -201,6 +211,27 @@ class CityController extends Controller
      return view('pages.citytemplate')->with($data);
     }
 
+    public function tourbycategory(Request $request)
+    {
+        $city = City::find($request->id);
+        $categories = TourCategory::orderBy('categoryname', 'asc')->get();
+        $tours = DB::table('tours')->where(['city_id' => $request->id,'tourcategory_id' => $request->catid])->get();
+        $citycount = City::count();
+        $guidecount = User::count();
+        $tourcount = Tour::count();
+
+        $data = array(
+            'city' => $city,
+            'categories' => $categories,
+            'tours' => $tours,
+            'citycount' => $citycount,
+            'guidecount' => $guidecount,
+            'tourcount' => $tourcount
+        );
+
+
+        return view('pages.citytemplate')->with($data);
+    }
     public function search(Request $request)
     {
         $search = $request->get('search');

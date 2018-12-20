@@ -10,7 +10,7 @@
             <hr>
             {!! $tourcategory->categorydescription !!}
         </div>
-        <small>Created {{ $tourcategory->created_at }}</small>
+        <small>Created {{ $tourcategory->created_at->format('d/m/Y') }}</small>
         <hr>
         <a href="/cities" class="btn btn-success">Back</a>
         @if(!Auth::guest())
