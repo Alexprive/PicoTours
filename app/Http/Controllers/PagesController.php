@@ -15,7 +15,7 @@ class PagesController extends Controller
     }
 
     public function getstarted(){
-        return view('inc.getstarted');
+        return view('pages.getstarted');
     }
 
     public function faq(){
@@ -25,21 +25,4 @@ class PagesController extends Controller
     public function sitemap(){
         return view ('pages.sitemap');
     }
-
-    public function booktour(){
-        return view ('pages.booktour');
-    }
-
-    public function booktour2(){
-    return redirect('/pages/cityoverview')->with('success', 'Your tour has been booked! You will recieve confirmation by e-mail within the hour!');
-    }
-    public function contact() {
-        return view('inc.contact');
-
-    }
 }
-
-
-
-
-

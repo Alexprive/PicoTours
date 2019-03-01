@@ -275,7 +275,7 @@ class TourController extends Controller
             'user' => $user,
             'category' => $category
         );
-        
+
 
         return view ('pages.tourdetails')->with($data);
     }
